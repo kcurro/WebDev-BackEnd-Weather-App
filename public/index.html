@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albert Einstein Portfolio</title>
+
+    <!---the css will go in here-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!---adding in font style here-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+<style>
+    .nav-bg{
+    text-decoration: none;
+    color: var(--darkBrown);
+}
+
+:root{
+    --myPaddingSize: 1em; 
+    --smallWidthBlock: 25%;
+    --largeWidthBlock: 70%;
+    --blockDisplay: inline-block;
+    --justify: center;
+    --myPaddingSizeL: 5em; 
+    
+    /*color combo links: https://colorpalettes.net/color-palette-4287/ https://colorpalettes.net/color-palette-4288/ https://colorpalettes.net/color-palette-4313/*/
+    --black: #1a1a1d;
+    --darkBrown: #614b3e;
+    --brown: #8c7b73;
+    --lightBrown: #d2c1b5;
+    --orange: #d28e5f;
+    --lightYellow: #ecdab9;
+    --lightGray: #c1c8c7;
+    --darkGray: #5e6668;
+    --lightPink: #f3e9e7;
+
+    --headerFontSize: 18px;
+    --textFontSize: 15px;
+    --textFontSizeSmall: 12px;
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    /* add in col template size since we have 2 cols to be reasonable we make 4 cols*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*now defining the rows as 9*/
+    grid-template-rows: 0.2fr 0.2fr 1fr 2.2fr 3fr 2.2fr 2.2fr 1fr 0.2fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "header header header header"
+    "aboutme aboutme aboutme aboutme"
+    "photo photo photo photo"
+    "papers papers papers papers"
+    "experience experience hobbies hobbies"
+    "images images images images"
+    "blog blog blog blog"
+    "footer footer footer footer";
+    grid-gap: 0.5rem;
+    font-family: 'Scheherazade New', serif;
+    font-size: var(--textFontSize);
+}
+
+.sectionDiv{
+    background-color: var(--lightPink);
+}
+
+nav{
+    grid-area: nav;
+    display: grid;
+    background-color: var(--lightBrown);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: var(--justify);
+    text-align: var(--justify);
+    font-size: var(--textFontSize);
+}
+
+
+#1{
+    grid-column: 1;
+}
+  
+#2{
+    grid-column: 2;
+}
+#3{
+    grid-column: 3;
+}
+#4{
+    grid-column: 4;
+}
+#5{
+    grid-column: 5;
+}
+#6{
+    grid-column: 6;
+}
+#7{
+    grid-column: 7;
+}
+
+header{
+    text-align: var(--justify);
+    grid-area: header;
+    padding: var(--myPaddingSize); 
+}
+
+#aboutme{
+    grid-area: aboutme;
+    padding: var(--myPaddingSize); 
+    align-items: var(--justify);
+}
+
+.about2{
+    color: var(--black);
+    display: var(--blockDisplay);
+    font-size: var(--headerFontSize);
+    width: var(--smallWidthBlock);
+    text-align: var(--justify);
+}
+.about1{
+    color: var(--darkBrown);
+    display: var(--blockDisplay);
+    width: 60%;
+    text-align: var(--justify);
+}
+
+#photo{
+    grid-area: photo;
+    background-color: var(--lightBrown);
+    padding: var(--myPaddingSize); 
+    opacity: 0.75;
+    padding-top: var(--myPaddingSize);
+    text-align: var(--justify);
+}
+
+#experience{
+    grid-area:experience;
+    background-color: var(--lightBrown);
+    padding: var(--myPaddingSize); 
+    color: var(--black);
+
+
+}
+
+#hobbies{
+    grid-area:hobbies;
+    background-color: var(--lightYellow);
+    padding: var(--myPaddingSize); 
+    color: var(--black);
+
+}
+
+#images{
+    grid-area:images;
+    padding: var(--myPaddingSize); 
+
+}
+
+
+.images1{
+    width: 100%;
+    text-align: var(--justify);
+    padding: var(--myPaddingSize); 
+    display: var(--blockDisplay);
+
+
+
+}
+.images2{
+    width: 100%;
+    font-size: var(--headerFontSize);
+    color: var(--black);
+    text-align: var(--justify);
+
+
+
+}
+
+#blog{
+    grid-area:blog;    
+    background-color: var(--lightYellow);
+    padding: var(--myPaddingSize); 
+
+
+}
+.blogs2{
+    font-size: var(--headerFontSize);
+    color: var(--black);
+    width: var(--smallWidthBlock);
+    text-align: var(--justify);
+    display: var(--blockDisplay);
+}
+.blogs1{
+    color: var(--darkBrown);
+    width: var(--largeWidthBlock);
+    display: var(--blockDisplay);
+    text-align: var(--justify);
+
+}
+
+#papers{
+    grid-area: papers;
+    padding: var(--myPaddingSize); 
+}
+
+.paperbackground{
+    background-color: var(--lightGray);
+    color: var(--darkBrown);
+    width: 100%;
+}
+
+.papers2{
+    font-size: var(--headerFontSize);
+    color: var(--black);
+    width: 100%;
+    text-align: var(--justify);
+}
+
+.papers1{
+    color: var(--darkBrown);
+    text-align: var(--justify);
+    font-size: var(--textFontSize);
+}
+
+footer{
+    grid-area:footer;
+    background-color: var(--lightBrown);
+    padding: var(--myPaddingSize); 
+    color: var(--black);
+    font-size: var(--headerFontSize);
+    display: var(--blockDisplay);
+    text-align: var(--justify);
+}
+
+.footer-bg{
+    color: var(--darkGray);
+    text-decoration:none;
+}
+
+
+/*QUESTION 4: for cellphone/mobile responsive layout*/
+@media only screen and (max-width: 500px){
+    /*if less than 500 px we go to this view which is a mobile layout*/
+    .container{
+        /*only need 1 col*/
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 1.2fr 1fr 2.2fr 1.2fr 1.2fr 1fr 1fr 0.4fr;
+
+        grid-template-areas: 
+        "nav"
+        "header"
+        "aboutme"
+        "photo"
+        "papers"
+        "experience"
+        "hobbies"
+        "images"
+        "blog"
+        "footer";
+        row-gap: 0.5rem;
+        font-family: 'Rubik', sans-serif;
+        font-size: var(--textFontSizeSmall);
+    }
+}
+</style>
+</head>
+
+<body>
+    <div class = "container">
+        <nav>
+            <a class="nav-bg" id="1" href="#aboutme" > About Me</a>
+            <a class="nav-bg" id="2" href="#papers"> Papers</a>
+            <a class="nav-bg" id="3" href="#experience"> Experience</a>
+            <a class="nav-bg" id="4" href="#hobbies"> Hobbies</a>
+            <a class="nav-bg" id="5" href="#images"> Images</a>
+            <a class="nav-bg" id="6" href="#blog"> Blog</a>
+            <a class="nav-bg" id="7" href="#footer"> More</a>
+        </nav>
+
+    <!---creating a header to for my name under nav bar and before about me-->
+        <header>
+            <h1>Albert Einstein</h1>
+        </header>
+
+    <!---creating block for about me section. aboutme is the parent container-->
+        <article class="sectionDiv" id="aboutme">
+            <section class="about2">
+                <h1>About Me</h1>
+                <img src="data:image/jpeg;base64,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" alt="profile pic for einstein">
+            </section>
+            <section class="about1">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem 
+                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                </p>
+            </section>
+        </article>
+
+    <!---an image block to break up the page-->
+        <section id="photo">
+            <img src="https://pbs.twimg.com/profile_images/697950843199303680/obyZ2Qrv.jpg" alt="image of einstein with tounge out">
+        </section>
+    <!---creating section for papers as blocks for each-->
+        <article class="sectionDiv" id="papers">
+            <section class="papers2">
+                <h1>My Papers</h1>
+            </section>
+            <section class="papers1">
+                <article class="paperbackground">
+                    <h1>The Principle of Relativity and Its Consequences in Modern Physics</h1>
+                    <a class="footer-bg" href="https://einsteinpapers.press.princeton.edu/vol3-doc/168">Read More</a>
+                </article>
+                <article class="paperbackground">
+                    <h1>On the Theory of Light Quanta and the Question of the Localization of Electromagnetic Energy</h1>
+                    <a class="footer-bg" href="https://einsteinpapers.press.princeton.edu/vol3-doc/286">Read More</a>
+                </article>
+                <article class="paperbackground">
+                    <h1>The Theory of the Opalescence of Homogeneous Fluids and Liquid Mixtures near the Critical State</h1>
+                    <a class="footer-bg" href="https://einsteinpapers.press.princeton.edu/vol3-doc/324">Read More</a>
+                </article>
+                <article class="paperbackground">
+                    <h1>The Theory of Relativity</h1>
+                    <a class="footer-bg" href="https://einsteinpapers.press.princeton.edu/vol3-doc/462">Read More</a>
+                </article>
+                <article class="paperbackground">
+                    <h1>Is there a Gravitational Effect Which is Analogous to Electrodynamic Induction?</h1>
+                    <a class="footer-bg" href="https://einsteinpapers.press.princeton.edu/vol4-doc/196">Read More</a>
+                </article>
+                <article class="paperbackground">
+                    <h1>The Speed of Light and the Statics of the Gravitational Field</h1>
+                    <a class="footer-bg" href="https://einsteinpapers.press.princeton.edu/vol4-doc/151">Read More</a>
+                </article>
+                <article class="paperbackground">
+                    <h1>Thermodynamic Proof of the Law of Photochemical Equivalence</h1>
+                    <a class="footer-bg" href="https://einsteinpapers.press.princeton.edu/vol4-doc/136">Read More</a>
+                </article>
+                <article class="paperbackground">
+                    <h1>Theory of Gravitation</h1>
+                    <a class="footer-bg" href="https://einsteinpapers.press.princeton.edu/vol4-doc/496">Read More</a>
+                </article>
+            </section>
+        </article>
+
+    <!---creating block for experience section-->
+        <section id="experience">
+            <h1>My Experience</h1>
+            <ul>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+            </ul>
+        </section>
+
+    <!---creating block for hobbies section-->
+        <section id="hobbies">
+            <h1>My Hobbies</h1>
+            <ul>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+            </ul>
+        </section>
+
+    <!---creating block for images section-->
+        <article class="sectionDiv" id="images">
+            <section class="images2">
+                <h1>My Image Collection</h1>
+            </section>
+            <section class="images1">
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/Purple18/v4/9c/9e/54/9c9e54d9-fec4-2cb3-2dca-3c363a57b279/source/256x256bb.jpg" alt=”Albert Einstein Picture 1”>
+                <img src="https://c-cl.cdn.smule.com/rs-s42/arr/ba/9f/2cb3f1a0-8718-4ca7-855b-af9a05c5b851.jpg" alt=”Albert Einstein Picture 2”>
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/c6/1c/c7/c61cc797-8efb-3d26-8647-0ca5778cb399/source/256x256bb.jpg" alt=”Albert Einstein Picture 3”>
+                <img src="https://c-cl.cdn.smule.com/rs-s42/arr/ba/9f/2cb3f1a0-8718-4ca7-855b-af9a05c5b851.jpg" alt=”Albert Einstein Picture 4”>
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/Purple18/v4/9c/9e/54/9c9e54d9-fec4-2cb3-2dca-3c363a57b279/source/256x256bb.jpg" alt=”Albert Einstein Picture 1”>
+            </section>
+        </article>
+
+    <!---creating block for blog section-->
+        <article class="sectionDiv" id="blog">
+            <section class="blogs2">
+                <h1>My Blog</h1>
+            </section>
+            <section class="blogs1">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+            </section>
+        </article>
+
+    <!---creating footer block in here-->
+        <footer id="footer">
+            <h3>To learn more about me visit:</h3>
+            <a class="nav-bg" href="https://en.wikipedia.org/wiki/Albert_Einstein">Wikipedia</a>
+        </footer>
+
+    </div>
+
+</body>
+</html>

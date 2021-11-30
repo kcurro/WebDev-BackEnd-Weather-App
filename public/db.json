@@ -1,0 +1,204 @@
+{"cities": [{
+    "id":1,
+    "name": "New York",
+    "weekday1" : "Sunday",
+    "Sunday": "Cloudy",
+    "date1": "01-01-2022",
+
+    "weekday2" : "Monday",
+    "Monday": "Sunny",
+    "date2": "01-02-2022",
+
+    "weekday3" : "Tuesday",
+    "Tuesday": "Rainy",
+    "date3": "01-03-2022",
+
+    "weekday4" : "Wednesday",
+    "Wednesday": "Cloudy",
+    "date4": "01-04-2022",
+
+    "weekday5" : "Thursday",
+    "Thursday": "Sunny",
+    "date5": "01-05-2022",
+
+    "weekday6" : "Friday",
+    "Friday": "Sunny",
+    "date6": "01-06-2022",
+
+    "weekday7" : "Saturday",
+    "Saturday": "Rainy",
+    "date7": "01-07-2022",
+    "rainyDays": true,
+    "image": null
+  },
+  {
+    "id":2,
+    "name": "Los Angeles",
+
+    "weekday1" : "Sunday",
+    "Sunday": "Cloudy",
+    "date1": "01-01-2022",
+
+    "weekday2" : "Monday",
+    "Monday": "Sunny",
+    "date2": "01-02-2022",
+
+    "weekday3" : "Tuesday",
+    "Tuesday": "Rainy",
+    "date3": "01-03-2022",
+
+    "weekday4" : "Wednesday",
+    "Wednesday": "Cloudy",
+    "date4": "01-04-2022",
+
+    "weekday5" : "Thursday",
+    "Thursday": "Sunny",
+    "date5": "01-05-2022",
+
+    "weekday6" : "Friday",
+    "Friday": "Sunny",
+    "date6": "01-06-2022",
+
+    "weekday7" : "Saturday",
+    "Saturday": "Rainy",
+    "date7": "01-07-2022",
+    "rainyDays": true,
+    "image": null
+
+  },
+  {
+    "id":3,
+    "name": "Chicago",
+    "weekday1" : "Sunday",
+    "Sunday": "Cloudy",
+    "date1": "01-01-2022",
+
+    "weekday2" : "Monday",
+    "Monday": "Sunny",
+    "date2": "01-02-2022",
+
+    "weekday3" : "Tuesday",
+    "Tuesday": "Rainy",
+    "date3": "01-03-2022",
+
+    "weekday4" : "Wednesday",
+    "Wednesday": "Cloudy",
+    "date4": "01-04-2022",
+
+    "weekday5" : "Thursday",
+    "Thursday": "Sunny",
+    "date5": "01-05-2022",
+
+    "weekday6" : "Friday",
+    "Friday": "Sunny",
+    "date6": "01-06-2022",
+
+    "weekday7" : "Saturday",
+    "Saturday": "Rainy",
+    "date7": "01-07-2022",
+    "rainyDays": true,
+    "image": null
+
+  },
+  {
+    "id":4,
+    "name": "Houston",
+    "weekday1" : "Sunday",
+    "Sunday": "Cloudy",
+    "date1": "01-01-2022",
+
+    "weekday2" : "Monday",
+    "Monday": "Sunny",
+    "date2": "01-02-2022",
+
+    "weekday3" : "Tuesday",
+    "Tuesday": "Rainy",
+    "date3": "01-03-2022",
+
+    "weekday4" : "Wednesday",
+    "Wednesday": "Cloudy",
+    "date4": "01-04-2022",
+
+    "weekday5" : "Thursday",
+    "Thursday": "Sunny",
+    "date5": "01-05-2022",
+
+    "weekday6" : "Friday",
+    "Friday": "Sunny",
+    "date6": "01-06-2022",
+
+    "weekday7" : "Saturday",
+    "Saturday": "Rainy",
+    "date7": "01-07-2022",
+    "rainyDays": true,
+    "image": null
+
+  },
+  {
+    "id":5,
+    "name": "Phoenix",
+    "weekday1" : "Sunday",
+    "Sunday": "Cloudy",
+    "date1": "01-01-2022",
+
+    "weekday2" : "Monday",
+    "Monday": "Sunny",
+    "date2": "01-02-2022",
+
+    "weekday3" : "Tuesday",
+    "Tuesday": "Sunny",
+    "date3": "01-03-2022",
+
+    "weekday4" : "Wednesday",
+    "Wednesday": "Sunny",
+    "date4": "01-04-2022",
+
+    "weekday5" : "Thursday",
+    "Thursday": "Sunny",
+    "date5": "01-05-2022",
+
+    "weekday6" : "Friday",
+    "Friday": "Sunny",
+    "date6": "01-06-2022",
+
+    "weekday7" : "Saturday",
+    "Saturday": "Cloudy",
+    "date7": "01-07-2022",
+    "rainyDays": false,
+    "image": null
+
+  },
+  {
+    "id":6,
+    "name": "New Haven",
+    "weekday1" : "Sunday",
+    "Sunday": "Sunny",
+    "date1": "01-01-2022",
+
+    "weekday2" : "Monday",
+    "Monday": "Sunny",
+    "date2": "01-02-2022",
+
+    "weekday3" : "Tuesday",
+    "Tuesday": "Sunny",
+    "date3": "01-03-2022",
+
+    "weekday4" : "Wednesday",
+    "Wednesday": "Sunny",
+    "date4": "01-04-2022",
+
+    "weekday5" : "Thursday",
+    "Thursday": "Sunny",
+    "date5": "01-05-2022",
+
+    "weekday6" : "Friday",
+    "Friday": "Sunny",
+    "date6": "01-06-2022",
+
+    "weekday7" : "Saturday",
+    "Saturday": "Sunny",
+    "date7": "01-07-2022",
+    "rainyDays": false,
+    "image": null
+
+  }]}
