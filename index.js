@@ -27,7 +27,7 @@ const server= http.createServer((req, res) => {
         // bring about.html
         const headers2 = {
             "Access-Control-Allow-Origin": "*",
-            'Content-Type': 'application/json'// 30 days
+            'Content-Type': 'application/json'
           };
         fs.readFile(path.join(__dirname,'public','db.json'),(err, content)=>{
 
