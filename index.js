@@ -6,34 +6,56 @@ const path = require ('path'); //we also need to bring in path to create a folde
 
 const server= http.createServer((req, res) => {
    
-
     console.log(req.url);
     
     if(req.url ==='/'){
         //bring index. html
-
+        const headers = {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
+            "Access-Control-Max-Age": 2592000, 
+            'Content-Type': 'text/html'// 30 days
+            /** add other headers as per requirement */
+          };
         fs.readFile(path.join(__dirname,'public','index.html'),(err, content)=>{
 
                 if (err) throw err;
-                res.writeHead(200, {'Content-Type': 'text/html'});
+                //res.writeHead(200, {'Content-Type': 'text/html'});
+                res.writeHead(200, headers);
                 res.end(content)
         });       
     }
     
     else if(req.url ==='/api'){
         // bring about.html
+        const headers = {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
+            "Access-Control-Max-Age": 2592000, 
+            'Content-Type': 'application/json'// 30 days
+            /** add other headers as per requirement */
+          };
         fs.readFile(path.join(__dirname,'public','db.json'),(err, content)=>{
 
             if (err) throw err;
-            res.writeHead(200, {'Content-Type': 'application/json'});
+            res.writeHead(200,headers);
+            //res.writeHead(200, {'Content-Type': 'application/json'});
             res.end(content)
     });   
 
     }else {
+        const headers = {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
+            "Access-Control-Max-Age": 2592000, 
+            'Content-Type': 'text/html'// 30 days
+            /** add other headers as per requirement */
+          };
         fs.readFile(path.join(__dirname,'public','404.html'),(err, content)=>{
 
             if (err) throw err;
-            res.writeHead(200, {'Content-Type': 'text/html'});
+            res.writeHead(200, headers);
+            //res.writeHead(200, {'Content-Type': 'text/html'});
             res.end(content)
     });   
     }
