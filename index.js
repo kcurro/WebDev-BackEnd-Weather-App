@@ -10,43 +10,43 @@ const server= http.createServer((req, res) => {
     
     if(req.url ==='/'){
         //bring index. html
-        /*const headers = {
+        const headers = {
             "Access-Control-Allow-Origin": "*",
             'Content-Type': 'text/html'// 30 days
-          };*/
+          };
         fs.readFile(path.join(__dirname,'public','index.html'),(err, content)=>{
 
                 if (err) throw err;
-                res.writeHead(200, {'Content-Type': 'text/html'});
-                //res.writeHead(200, headers);
+                //res.writeHead(200, {'Content-Type': 'text/html'});
+                res.writeHead(200, headers);
                 res.end(content)
         });       
     }
     
     else if(req.url ==='/api'){
         // bring about.html
-        /*const headers = {
+        const headers2 = {
             "Access-Control-Allow-Origin": "*",
             'Content-Type': 'application/json'// 30 days
-          };*/
+          };
         fs.readFile(path.join(__dirname,'public','db.json'),(err, content)=>{
 
             if (err) throw err;
-            //res.writeHead(200,headers);
-            res.writeHead(200, {'Content-Type': 'application/json'});
+            res.writeHead(200,headers2);
+            //res.writeHead(200, {'Content-Type': 'application/json'});
             res.end(content)
     });   
 
     }else {
-        /*const headers = {
+        const headers3 = {
             "Access-Control-Allow-Origin": "*",
             'Content-Type': 'text/html'// 30 days
-          };*/
+          };
         fs.readFile(path.join(__dirname,'public','404.html'),(err, content)=>{
 
             if (err) throw err;
-            //res.writeHead(200, headers);
-            res.writeHead(200, {'Content-Type': 'text/html'});
+            res.writeHead(200, headers3);
+            //res.writeHead(200, {'Content-Type': 'text/html'});
             res.end(content)
     });   
     }
