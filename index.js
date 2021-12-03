@@ -42,7 +42,7 @@ const server= http.createServer((req, res) => {
 
 
 })
-.listen(4000, () => console.log('Our first server in class exercise is running...'))
+.listen(process.env.PORT || 4000, () => console.log('Our first server in class exercise is running...'))
 /*const PORT =process.env.PORT || 5959
 //const PORT = 8752;
 server.listen(PORT, () => console.log('Server running...'));
