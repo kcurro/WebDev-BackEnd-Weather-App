@@ -12,8 +12,6 @@ const server= http.createServer((req, res) => {
         //bring index. html
         const headers = {
             "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
-            "Access-Control-Max-Age": 2592000, 
             'Content-Type': 'text/html'// 30 days
             /** add other headers as per requirement */
           };
@@ -30,8 +28,6 @@ const server= http.createServer((req, res) => {
         // bring about.html
         const headers = {
             "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
-            "Access-Control-Max-Age": 2592000, 
             'Content-Type': 'application/json'// 30 days
             /** add other headers as per requirement */
           };
@@ -46,8 +42,6 @@ const server= http.createServer((req, res) => {
     }else {
         const headers = {
             "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
-            "Access-Control-Max-Age": 2592000, 
             'Content-Type': 'text/html'// 30 days
             /** add other headers as per requirement */
           };
